@@ -4,7 +4,7 @@ local TP = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local Close = Instance.new("TextButton")
 
-wait(0.5)
+wait(0.1)
 
 SafeSpotGui.Name = "SafeSpotGui"
 SafeSpotGui.Parent = game:GetService("CoreGui")
@@ -13,14 +13,14 @@ SafeSpotGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Menu.Name = "Menu"
 Menu.Parent = SafeSpotGui
 Menu.Active = true
-Menu.BackgroundColor3 = Color3.fromRGB(255, 165, 0) -- Orange background
+Menu.BackgroundColor3 = Color3.fromRGB(0, 44, 165)
 Menu.Position = UDim2.new(0.4, 0, 0.3, 0)
 Menu.Selectable = true
 Menu.Size = UDim2.new(0, 200, 0, 150)
 
 TP.Name = "TP"
 TP.Parent = Menu
-TP.BackgroundColor3 = Color3.fromRGB(0, 128, 0) -- Green button
+TP.BackgroundColor3 = Color3.fromRGB(0, 128, 0)
 TP.Position = UDim2.new(0.3, 0, 0.5, 0)
 TP.Size = UDim2.new(0, 100, 0, 30)
 TP.Font = Enum.Font.ArialBold
@@ -29,7 +29,7 @@ TP.TextColor3 = Color3.fromRGB(255, 255, 255)
 TP.TextSize = 18.000
 
 TextLabel.Parent = Menu
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- White label
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.Position = UDim2.new(0.1, 0, 0.1, 0)
 TextLabel.Size = UDim2.new(0, 150, 0, 30)
@@ -40,7 +40,7 @@ TextLabel.TextSize = 18.000
 
 Close.Name = "Close"
 Close.Parent = Menu
-Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Red close button
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 Close.Position = UDim2.new(0.8, 0, 0.1, 0)
 Close.Size = UDim2.new(0, 30, 0, 30)
 Close.Font = Enum.Font.Unknown
@@ -63,11 +63,11 @@ local function QFDYLLB_fake_script() -- TP.LocalScript
     TP.MouseButton1Click:Connect(function()
         local platform = Instance.new("Part")
         platform.Anchored = true
-        platform.Size = Vector3.new(21, 7, 21)
+        platform.Size = Vector3.new(50, 50, 50)
         platform.CFrame = CFrame.new(-2000, 100, -2000)
-        platform.BrickColor = BrickColor.new("Cyan")
+        platform.BrickColor = BrickColor.new("Green")
         platform.Parent = game:GetService("Workspace")
-        wait(0.5)
+        wait(0.1)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
     end)
 end
